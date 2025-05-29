@@ -1,0 +1,58 @@
+.icon {
+            background-image: url(./shoe-icon.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .banner{
+            background-image: url(./pexels-webdonut-19090-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .pcard{
+            width: 300px;
+            overflow: hidden;
+        }
+        .pcard img{
+            height: 300px;
+            width: 100%;
+        }
+        .cart-icn{
+           position: relative;
+           cursor: pointer;
+        }
+        #cart-num{
+            position: absolute;
+            top: 1%;
+            right: 1.5%;
+        }
+        #cart-num-sm{
+            position: absolute;
+            left: 14%;
+            top: 5.2%;
+        }
+        #crt{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        #crt-btn{
+             cursor: pointer;
+        }
+
+        #crt{
+            overflow-y: auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .add-t-cart{
+            cursor: pointer;
+
+        }
+
+        .add-t-cart:active{
+            background-color: azure;
+            color: black;
+        }
