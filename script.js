@@ -8,7 +8,17 @@ menu_btn.addEventListener('click', () => {
 
 })
 
-
+document.getElementById('subscribeform').addEventListener('submit', (event)=>{
+    event.preventDefault();
+    const emailInput = document.getElementById('email');
+            if (emailInput) {
+                const email = emailInput.value;
+                console.log('Email to subscribe:', email);
+                emailInput.value = '';
+            } else {
+                console.error("Email input with ID 'email' not found in subscribe form.");
+            }
+ })
 
 let productName = '';
 let productPrice = '';
