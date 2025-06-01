@@ -7,15 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R3Z3T4JHF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4R3Z3T4JHF');
-</script>
 <body style="overflow-x: hidden; position: relative;">
     <header class="w-full">
         <nav class="flex justify-between w-full px-4 md:px-8 py-2 items-center">
@@ -25,9 +16,9 @@
             </div>
             <div class="hidden gap-6 md:flex items-center">
                 <a href="index.html">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">Blog</a>
-                <a href="#">About</a>
+                <a href="#product-container">Shop</a>
+                
+                <a href="#about-us">About</a>
                 <img src="./icons8-cart-50.png" class="h-[25px] w-[25px] cart-icn" id="cart_icon_desktop"/>
                 <span class="bg-red-600 text-white px-1 rounded-full" id="cart-num">0</span>
             </div>
@@ -37,15 +28,15 @@
         </nav>
         <div class=" hidden flex flex-col px-6 py-4 gap-6 md:hidden border-t-2 border-b-2 border-indigo-400" id="drop_nav">
                 <a href="index.html">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">Blog</a>
-                <a href="#">About</a>
+                <a href="#product-container">Shop</a>
+                
+                <a href="#about-us">About</a>
                 <img src="./icons8-cart-50.png" class="h-[25px] w-[25px] cart-icn" id="cart_icon_sm"/>
                 <span class="bg-red-600 text-white px-1 rounded-full" id="cart-num-sm">0</span>
             </div>
      </header>
 
-      <main class=" px-2 md:px-6 flex flex-col py-4 gap-4 md:gap-0 md:py-0 md:flex-row items-center bg-slate-200">
+     <main class=" px-2 md:px-6 flex flex-col py-4 gap-4 md:gap-0 md:py-0 md:flex-row items-center bg-slate-200">
         <div class="banner md:h-[450px] md:w-[580px]"></div>
         <div class="desc flex flex-col gap-8 justify-start">
             <p>Our Exclusive</p>
@@ -55,6 +46,35 @@
         </div>
         
     </main>
+
+    <section id="about-us" class="px-4 py-8 md:px-12 bg-white text-center">
+        <h2 class="text-4xl font-bold mb-6 text-gray-800">About WalkOfFame</h2>
+        <div class="flex flex-col md:flex-row gap-4 items-center">
+            <div>
+            <p class="mb-4">
+                Welcome to WalkOfFame, your premier destination for the latest and greatest in footwear. 
+                Born from a passion for quality, comfort, and style, we believe that every step you take 
+                should be a statement.
+            </p>
+            <p class="mb-4">
+                We meticulously curate our collection, featuring everything from cutting-edge athletic 
+                sneakers to elegant formal wear, ensuring that you find the perfect pair for every occasion. 
+                Our commitment extends beyond just shoes; we're dedicated to providing an unparalleled 
+                shopping experience, from Browse to unboxing.
+            </p>
+            <p class="mb-4">
+                At WalkOfFame, we're not just selling shoes; we're empowering you to walk with confidence, 
+                comfort, and undeniable flair. Thank you for choosing us to be a part of your journey.
+            </p>
+            </div>
+            <div style="max-height: fit-content; max-width: fit-content;">
+                <video controls autoplay muted loop class="w-[800px] h-[300px] rounded-lg shadow-lg">
+                    <source src="your_video.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
     <div class="products flex gap-2 flex-wrap justify-center p-4" id="product-container">
         <div class="pcard rounded-md shadow-lg shadow-slate-400" >
             <img src="./shoes/alexander-rotker-l8p1aWZqHvE-unsplash.jpg" class="product-image"/>
@@ -178,7 +198,7 @@
                 <div class="flex gap-2">
                     <a href="#" class="text-blue-300">Facebook</a>
                     <a href="#" class="text-blue-300">Twitter</a>
-                    <a href="#" class="text-pink-300">Instagram</a>
+                    <a href="#" class="text-blue-300">Instagram</a>
                     <a href="#" class="text-red-400">Pinterest</a>
                     </div>
                 </div>
@@ -186,8 +206,9 @@
                 <div class="flex flex-col gap-2">
                 <h4>Sign Up For Our Newsletter</h4>
                 <p class="text-slate-200 text-sm">Get exclusive deals and the latest shoe trends!</p>
-                <form>
-                    <input type="email" placeholder="Your Email Address" style="padding:10px; border:1px solid #ccc; border-radius:5px 0 0 5px; flex-grow:1;">
+                <form action="" method="get" id="subscribeform">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="Your Email Address" style="padding:10px; border:1px solid #ccc; border-radius:5px 0 0 5px; flex-grow:1;" name="mail" id="email">
                     <button type="submit" style="background-color:#007bff; color:white; border:none; padding:10px 15px; border-radius:0 5px 5px 0; cursor:pointer;">Subscribe</button>
                 </form>
                 </div>
@@ -233,16 +254,18 @@
     </footer>
     <div id="crt" class=" w-full md:w-[35%] h-screen bg-white hidden" >
         <div class="flex justify-between p-3 items-center">
-         <h1 class="text-center font-semibold">Cart</h1>
-         <p class="text-xl" id="crt-btn">x</p>
+           <h1 class="text-center font-semibold">Cart</h1>
+           <p class="text-xl" id="crt-btn">x</p>
      </div>
-     <div class="flex justify-between p-3 items-center">
-         <h1 class="text-center font-semibold">Total Amount :</h1>
-         <div>
-          <span>$</span>
-         <span class="text-xl" id="cartp">0</span>
-         </div>
+       <div class="flex justify-between p-3 items-center">
+           <h1 class="text-center font-semibold">Total Amount :</h1>
+           <div>
+           <span>$</span>
+           <span class="text-xl" id="cartp">0</span>
+           </div>
      </div>
+     <div id="cart-items-display" class="flex flex-col gap-4 p-3 overflow-y-auto">
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
