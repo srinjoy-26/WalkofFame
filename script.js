@@ -56,6 +56,23 @@ productsContainer.addEventListener('click', function (event) {
             
             console.log(`Adding to cart: Name: ${productName}, Price: ${productPrice} , cartprice: ${cartprice} , cart: ${cartnum} , src: ${image} `);
 
+            if (typeof gtag === 'function') {
+                gtag('event', 'add_to_cart', {
+                    currency: 'INR', 
+                    value: productPrice, 
+                    items: [{
+                        item_id: productName.replace(/\s/g, '_').toLowerCase(),
+                        item_name: productName,
+                        price: productPrice,
+                        quantity: 1 
+                        
+                    }]
+                });
+                console.log('GA4: add_to_cart event sent for:', productName);
+            } else {
+                console.warn('GA4: gtag function not found. Make sure your GA4 tracking code is loaded in the <head>.');
+            }
+
             document.getElementById('cart-num').innerText = cartnum;
 
         }
