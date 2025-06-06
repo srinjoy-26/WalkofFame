@@ -16,5 +16,6 @@ document.getElementById('contactForm').addEventListener('submit', (e)=>{
                     form_name: 'Contact Us Form', 
                     page_location: window.location.href
                 })
+    console.log('GA4: add_to_cart event sent for:', Nameval.value )
 
 })
