@@ -6,10 +6,9 @@ let Messageval = document.getElementById('message')
 document.getElementById('contactForm').addEventListener('submit', (e)=>{
     e.preventDefault();
     console.log(Nameval.value , Emailval.value , Inq_cat.value , Messageval.value);
-    charactersInMessage = Messageval.value.length
+    charactersInMessage = Messageval.value.length;
     gtag('event', 'contact_form_submit', {
-                    inquiry_category: Inq_cat.value,
-                    form_submit_status: formSubmitStatus, 
+                    inquiry_category: Inq_cat.value, 
                     characters_in_message: charactersInMessage,
                     submission_count: 1,
                     form_id: 'contactForm',
