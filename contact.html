@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - WalkOfFame</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Include your GA4 gtag.js script here, if not already in a shared header -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R3Z3T4JHF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-4R3Z3T4JHF'); // Replace with your actual GA4 Measurement ID
-    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,6 +84,15 @@
         }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R3Z3T4JHF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4R3Z3T4JHF');
+</script>
 <body class="overflow-x-hidden relative">
     <main class="container mx-auto px-4 py-8 md:py-12 flex flex-col items-center">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8 text-center">Contact Us</h1>
